@@ -1,6 +1,5 @@
-<b>
 # marz-py-backuper
-<p>Простой бот для бэкапа панели Marzban</p>
+<b><p>Простой бот для бэкапа панели Marzban</p>
 
 <h1>Настройка бота</h1>
 <h3>Подготовка</h3>
@@ -27,4 +26,4 @@
 <p>Редактировать нужно переменные bot_token, admin_id, backup_interval. Токен бота берем у @BotFather. admin_id указываем свой айди, его можно взять у бота @getmyid_bot. backup_interval задается в минутах, если нужно создавать бэкапы каждый час, нужно указать значение 60.</p>
 
 <h3>После изменения сохраняем файл (CTRL + X) и запускаем бота в фоне:<h3>
-<p>9. <code>nohup python3 main.py &</code></p>
+<p>9. <code>nohup python3 main.py &</code></p></b>
