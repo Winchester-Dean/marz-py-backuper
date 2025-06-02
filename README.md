@@ -9,25 +9,25 @@
 Сначала обновите пакеты (на всякий случай) и подготовьте среду:
 
 1.  <pre><code>apt update && apt upgrade -y</code></pre>
-2.  ```apt install git python3 python3-pip -y```
+2.  <pre><code>apt install git python3 python3-pip -y</code></pre>
 
 ### Скачиваем бота:
 
-3.  ```git clone https://github.com/Winchester-Dean/marz-py-backuper```
+3.  <pre><code>git clone https://github.com/Winchester-Dean/marz-py-backuper</code></pre>
 
 ### Переходим в директорию бота и скачиваем необходимые компоненты:
 
-4.  ```cd marz-py-backuper```
+4.  <pre><code>cd marz-py-backuper</code></pre>
 
 Обязательно перейдите в виртуальное окружение:
 
-5.  `python3 -m venv dean`
-6.  `source dean/bin/activate`
-7.  `pip3 install -r requirements.txt`
+5.  <pre><code>python3 -m venv dean</code></pre>
+6.  <pre><code>source dean/bin/activate</code></pre>
+7.  <pre><code>pip3 install -r requirements.txt</code></pre>
 
 ### Редактируем .env файл:
 
-8.  `nano .env`
+8.  <pre><code>nano .env</code></pre>
 
 Вам нужно отредактировать переменные `bot_token`, `admin_id`, и `backup_interval`.
 
@@ -37,4 +37,4 @@
 
 ### Запускаем бота в фоне:
 
-9.  `nohup python3 main.py &`
+9.  <pre><code>nohup python3 main.py &</code></pre>
