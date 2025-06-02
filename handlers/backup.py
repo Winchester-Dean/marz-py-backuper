@@ -120,5 +120,5 @@ async def scheduled_backups():
 
 @dp.message(Command("backup"))
 async def backup(msg: Message):
-    await create_and_send()
     await scheduled_backups()
+    await create_and_send()
