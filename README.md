@@ -8,16 +8,16 @@
 
 Сначала обновите пакеты (на всякий случай) и подготовьте среду:
 
-1.  `apt update && apt upgrade -y`
-2.  `apt install git python3 python3-pip -y`
+1.  ```apt update && apt upgrade -y```
+2.  ```apt install git python3 python3-pip -y```
 
 ### Скачиваем бота:
 
-3.  `git clone https://github.com/Winchester-Dean/marz-py-backuper`
+3.  ```git clone https://github.com/Winchester-Dean/marz-py-backuper```
 
 ### Переходим в директорию бота и скачиваем необходимые компоненты:
 
-4.  `cd marz-py-backuper`
+4.  ```cd marz-py-backuper```
 
 Обязательно перейдите в виртуальное окружение:
 
