@@ -8,7 +8,7 @@
 
 Сначала обновите пакеты (на всякий случай) и подготовьте среду:
 
-1.  <code><pre>apt update && apt upgrade -y</pre></code>
+1.  <pre><code>apt update && apt upgrade -y</code></pre>
 2.  ```apt install git python3 python3-pip -y```
 
 ### Скачиваем бота:
