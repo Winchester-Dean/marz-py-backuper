@@ -10,11 +10,11 @@ from aiogram.filters.command import Command
 from dispatcher import dp, bot
 from config_reader import config
 
+logging.basicConfig(level = logging.INFO)
+
 admin_id = config.admin_id
 
 async def create_backup():
-    logging.info("Начинаю создание бэкапа...")
-
     if not os.path.exists("root"):
         os.makedirs("root")
 
@@ -29,8 +29,6 @@ async def create_backup():
             os.path.join("root", 'var'),
             dirs_exist_ok=True
         )
-
-        logging.info("Директории успешно скопированы.")
     except Exception as error:
         logging.error(error)
         return False
@@ -48,15 +46,12 @@ async def create_backup():
                             file_path, "root"
                         )
                     )
-
-        logging.info("Архив резервной копии успешно создан.")
     except Exception as error:
         logging.error(error)
         return False
 
     try:
         shutil.rmtree("root")
-        logging.info("Временная директория удалена.")
     except Exception as error:
         logging.error(error)
         return False
@@ -66,7 +61,7 @@ async def create_backup():
 async def send_backup():
     now = datetime.datetime.now()
     backup_time = now.strftime("%d-%m-%Y %H-%M")
-    comment = f"<b>Резервная копия от {backup_time}\n\nCreated by stix_r.t.me\nhttps://github.com/Winchester-Dean/marz-backuper</b>"
+    comment = f"<b>Резервная копия от {backup_time}\n\nCreated by stix_r.t.me\nhttps://github.com/Winchester-Dean/marz-py-backuper</b>"
 
     try:
         backup_file = FSInputFile("backup.zip")
@@ -84,7 +79,6 @@ async def send_backup():
     finally:
         try:
             os.remove("backup.zip")
-            logging.info("Архив резервной копии удален.")
         except Exception as e:
             logging.warning(f"Ошибка при удалении архива: {e}")
 
@@ -102,7 +96,7 @@ async def create_and_send():
 async def scheduled_backups():
     while True:
         logging.info(
-            f"Ожидание {config.backup_interval} минут до следующего резервного копирования..."
+            f"Ожидание {config.backup_interval} минут до следующего резервного копирования"
         )
 
         await asyncio.sleep(
@@ -110,7 +104,7 @@ async def scheduled_backups():
         )
 
         logging.info(
-            "Начинаем запланированное резервное копирование..."
+            "Начинаем запланированное резервное копирование"
         )
         
         if admin_id:
